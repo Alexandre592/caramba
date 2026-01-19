@@ -1,4 +1,12 @@
 <?php
+<?php
+// Charger le fichier .env
+$dotenv = parse_ini_file(__DIR__ . '/.env');
+foreach ($dotenv as $key => $value) {
+    putenv("$key=$value");
+    $_ENV[$key] = trim($value, '"');
+}
+
 session_start();
 
 // Chargement de la BDD
