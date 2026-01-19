@@ -1,5 +1,5 @@
 <?php
-<?php
+
 // Charger le fichier .env
 $dotenv = parse_ini_file(__DIR__ . '/.env');
 foreach ($dotenv as $key => $value) {
