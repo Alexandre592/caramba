@@ -1,10 +1,10 @@
 <?php
 
 // Notre config de la BDD
-$host = $env['DB_HOST'];
-$dbname = $env['DB_NAME'];
-$username = $env['DB_USER'];
-$password = $env['DB_PASSWORD'];
+$host = $_ENV['DB_HOST'] ?? getenv('DB_HOST');
+$dbname = $_ENV['DB_NAME'] ?? getenv('DB_NAME');
+$username = $_ENV['DB_USER'] ?? getenv('DB_USER');
+$password = $_ENV['DB_PASSWORD'] ?? getenv('DB_PASSWORD');
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset"; 
