@@ -1,10 +1,10 @@
 <?php
 
 // Notre config de la BDD
-$host = "localhost";
-$dbname = "Caramba";
-$username = "root";
-$password = "";
+$host = $env['DB_HOST'];
+$dbname = $env['DB_NAME'];
+$username = $env['DB_USER'];
+$password = $env['DB_PASSWORD'];
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset"; 
