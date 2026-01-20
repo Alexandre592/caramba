@@ -7,8 +7,7 @@ $username = $_ENV['DB_USER'] ?? getenv('DB_USER');
 $password = $_ENV['DB_PASSWORD'] ?? getenv('DB_PASSWORD');
 $charset = 'utf8mb4';
 
-$dsn = "mysql:host=$host;dbname=$dbname;charset=$charset"; 
-
+$dsn = "mysql:host=$host;port=3306;dbname=$dbname;charset=$charset";
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
